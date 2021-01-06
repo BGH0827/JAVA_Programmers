@@ -3,7 +3,7 @@ class Solution {
         String answer = "";
         String[] a = s.split(" ");
         int max = Integer.parseInt(a[0]);
-        int min = Integer.parseInt(a[0]);
+        int min = max;
         
         for(int i=0; i<a.length; i++){
             if(Integer.parseInt(a[i])>max){
@@ -13,7 +13,7 @@ class Solution {
                 min = Integer.parseInt(a[i]);
             }
         }
-        answer += Integer.toString(min) + " " + Integer.toString(max);
+        answer = Integer.toString(min) + " " + Integer.toString(max);
         return answer;
     }
 }
