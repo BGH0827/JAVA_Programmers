@@ -1,0 +1,19 @@
+class Solution {
+    public String solution(String s) {
+        String answer = "";
+        String[] a = s.split(" ");
+        int max = Integer.parseInt(a[0]);
+        int min = Integer.parseInt(a[0]);
+        
+        for(int i=0; i<a.length; i++){
+            if(Integer.parseInt(a[i])>max){
+                max = Integer.parseInt(a[i]);
+            }
+            else if(Integer.parseInt(a[i])<min){
+                min = Integer.parseInt(a[i]);
+            }
+        }
+        answer += Integer.toString(min) + " " + Integer.toString(max);
+        return answer;
+    }
+}
